@@ -15,9 +15,9 @@ Current Important Parameters:
 - image patch dimensions
 - Number of patches to extract
 
-Step 1: Get images in python 
+Step 1: Get images in python (all images are 424x424 pixels)
 
-Step 2: Process raw images by cropping (and scaling?) them
+Step 2: Process raw images by cropping (and scaling?) them. (Crop to 160x160, scale to 16x16)
 
 **#TODO**
 
