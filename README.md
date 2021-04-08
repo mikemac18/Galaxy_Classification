@@ -2,6 +2,9 @@
 
 Image clustering using K-means for galaxy classification. 
 
+Approach based on:
+https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
+
 Challenge: Is the object a smooth galaxy, a galaxy with features/disk or a star?
 
 ==> 3 clusters (smooth, features/disk, star)
