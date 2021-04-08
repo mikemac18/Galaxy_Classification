@@ -19,7 +19,8 @@ Step 1: Get images in python
 
 Step 2: Process raw images by cropping (and scaling?) them
 
-#TODO
+**#TODO**
+
 Step 3: Extract image patches from the processed images (Outlined in section 2 of the Coates paper)
 
   Alternate routes we could take depending on how we do step 2:
