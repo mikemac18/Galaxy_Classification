@@ -16,7 +16,7 @@ Step 1: Get images in python
 
 Step 2: Process raw images by cropping (and scaling?) them
 
-Step 3: Extract image patches from the processed images
+Step 3: Extract image patches from the processed images (Outlined in section 2 of the Coates paper)
 
   Alternate routes we could take depending on how we do step 2:
   - getImage_noScaling -> we sample 16x16 image patches from the 160x160 images
