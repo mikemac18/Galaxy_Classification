@@ -6,6 +6,11 @@ This code will ideally be used for the unsupervised training algorithm (in this 
 extract 16-by-16 pixel grayscale patches represented as a vector of 256 pixel intensities
 
 I.E. Crop and scale images while keeping RGB channels 
+
+Implementing method outlined in this paper:
+
+https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
+
 """
 
 import numpy as np
@@ -26,37 +31,30 @@ class GetImage(object):
         self.image = cv2.imread(self.basepath+self.imPath_training+self.pic_Index)
 
     #Crop image from 424x424 to 160x160. To do we crop axes from {x=0, y=0, x=424, y=424 } => {x=132, y=132, x=292, 400=292}
-    def crop(self, size = 160):
-        """
-        Crops the image from the center into a square with sides of size
-        """
+    def crop(self, pixels_to_keep = 160):
 
         #Cast as int in order to use variables in the slicing indices
         center = int(424/2)
-        dim = int(size/2)
+        dim = int(pixels_to_keep/2)
         cropmin = center - dim
         cropmax = center + dim
         self.image = self.image[cropmin:cropmax, cropmin:cropmax]
         return self
 
+    #function that takes an image and scales the entire image to its new size (unlike crop, image stays intact). 
+    def scale(self, new_size = 16):
+        dimensions = (int(new_size), int(new_size))
+        self.image = cv2.resize(self.image, dimensions)
+        return self
+
+
 """
-#Attempt to scale a single image
+Testing the class by creating a 'galaxyPic' object, cropping it, scaling it, and saving the new image
 
+galaxyPic = GetImage()
+galaxyPic.crop()
+galaxyPic.scale()
 
-newx,newy = origImage.shape[1]/4,origImage.shape[0]/4 
-
-scaled_image = cv2.resize(origImage,(int(newx),int(newy)))
-
-
-cv2.imshow("original image",origImage)
-cv2.imshow("resize image",newimage)
-"""
-
-
-crop_img = GetImage()
-crop_img.crop()
-
-cv2.imwrite("testCrop.jpg", crop_img.image)
-cv2.imshow("cropped", crop_img.image)
-
+cv2.imwrite("testCrop-and-Scale.jpg", galaxyPic.image)
 cv2.waitKey(0)
+"""
