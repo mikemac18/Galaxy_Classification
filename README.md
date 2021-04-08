@@ -1,6 +1,6 @@
 # PHYS321_FinalProj
 
-Image clustering using K-means for galaxy classification. 
+Image clustering using K-means for feature generation and a predictor (TBD) for galaxy classification. 
 
 Approach based on:
 https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
