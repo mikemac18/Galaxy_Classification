@@ -19,7 +19,7 @@ Step 2: Process raw images by cropping (and scaling?) them
 Step 3: Extract image patches from the processed images (Outlined in section 2 of the Coates paper)
 
   Alternate routes we could take depending on how we do step 2:
-  - getImage_noScaling -> we sample 16x16 image patches from the 160x160 images
-  - getImage_withScaling -> We sample 4x4 image patches from the 16x16 images
+  - getImage_noScaling -> we sample 16x16 image patches from the 160x160 images (Method used in Coates paper)
+  - getImage_withScaling -> We sample 4x4 image patches from the 16x16 images (Less computationally intesive)
   
   
