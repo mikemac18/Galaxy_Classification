@@ -11,7 +11,7 @@ Challenge: Is the object a smooth galaxy, a galaxy with features/disk or a star?
 
 **#TODO**
 
-Find a way to read all of the images and store them somewhere in the code. Have to find a way to do this without manually entering the name of each image file. 
+Find a way to read all of the images and store them somewhere in the code. Have to find a way to do this without manually entering the name of each image file. OR: Instead of storing all the 424x424 images, we just _modify_ all of them and only store the cropped and scaled images.
 
 Current Important Parameters:
 - Crop size 
