@@ -9,6 +9,10 @@ Challenge: Is the object a smooth galaxy, a galaxy with features/disk or a star?
 
 ==> 3 clusters (smooth, features/disk, star)
 
+**#TODO**
+
+Find a way to read all of the images and store them somewhere in the code. Have to find a way to do this without manually entering the name of each image file. 
+
 Current Important Parameters:
 - Crop size 
 - scale size
