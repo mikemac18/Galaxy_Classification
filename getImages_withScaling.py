@@ -71,7 +71,7 @@ class GetImage(object):
             self.image = patch4
         return self.image
 
-
+"""
 #Testing the class by creating a 'galaxyPic' object, cropping it, scaling it, and saving the new image
 
 galaxyPic = GetImage()
@@ -80,3 +80,4 @@ galaxyPic.scale()
 
 cv2.imwrite("testCrop-and-Scale.jpg", galaxyPic.image)
 cv2.waitKey(0)
+"""

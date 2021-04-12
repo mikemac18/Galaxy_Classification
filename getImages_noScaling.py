@@ -22,12 +22,12 @@ class GetImage(object):
     #initialize the path (TODO - make basepath an input parameter, don't hardcode too much)
     def __init__(self, pic_Index= '100008.jpg'):
 
-        self.basepath = 'C:\\Users\\Admin\\321_galaxies\\'
+	self.basepath = 'C:\\Users\\Admin\\321_galaxies\\'
         self.imPath_test = 'images_training_rev1\\images_training_rev1\\'
         self.imPath_training = 'images_training_rev1\\images_training_rev1\\'
         self.pic_Index = pic_Index
-
-        #create variable that stores the image
+        
+	#create variable that stores the image
         self.image = cv2.imread(self.basepath+self.imPath_training+self.pic_Index)
 
     #Crop image from 424x424 to 160x160. To do we crop axes from {x=0, y=0, x=424, y=424 } => {x=132, y=132, x=292, 400=292}
@@ -41,10 +41,8 @@ class GetImage(object):
         self.image = self.image[cropmin:cropmax, cropmin:cropmax]
         return self
 
-
-
 """
-Testing the class by creating a 'galaxyPic' object, cropping it, and saving the new image
+#Testing the class by creating a 'galaxyPic' object, cropping it, and saving the new image
 
 galaxyPic = GetImage()
 galaxyPic.crop()
