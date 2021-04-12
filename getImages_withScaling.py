@@ -47,28 +47,17 @@ class GetImage(object):
         self.image = cv2.resize(self.image, dimensions)
         return self
     
-    #function that crops out 4x4 patches of our image. Each image will then have 4 patches.
-    def patch(self, p_size=4, patch_num):
-        patch_number = 'patch'+str(patch_num)
-        center1 = 2
-        center2 = 6
+    #function that crops out random 4x4 patches of an image.
+    def patch(self, p_size=4):
+        patch_x = np.random.randint(2, 14)
+        patch_y = np.random.randint(2, 14)
         dim = int(p_size/2)
-        patchmin1 = center1 - dim
-        patchmax1 = center1 + dim
-        patchmin2 = center2 - dim
-        patchmax2 = center2 + dim
-        patch1 = self.image[patchmin1:patchmax1, patchmin1:patchmax1]
-        patch2 = self.image[patchmin1:patchmax1, patchmin2:patchmax2]
-        patch3 = self.image[patchmin2:patchmax2, patchmin1:patchmax1]
-        patch4 = self.image[patchmin2:patchmax2, patchmin2:patchmax2]
-        if patch_number == 'patch1': 
-            self.image = patch1
-        if patch_number == 'patch2': 
-            self.image = patch2
-        if patch_number == 'patch3': 
-            self.image = patch3
-        if patch_number == 'patch4': 
-            self.image = patch4
+        patchminx = patch_x - dim
+        patchminy = patch_y - dim
+        patchmaxx = patch_x + dim
+        patchmaxy = patch_y + dim
+        patch = self.image[patchminx:patchmaxx, patchminy:patchmaxy]
+        self.image = patch
         return self.image
 
 """
