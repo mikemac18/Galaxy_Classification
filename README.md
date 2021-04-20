@@ -9,6 +9,7 @@ Raw data from Kaggle:
 https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge
 
 Files for our progression can be found in the folder 'Progress files' and our final submission code is in file GalaxyClassifier.ipynb. 
+The contribution by each student can be found in the contribution.txt file. 
 
 Challenge: Is the object a smooth galaxy, a galaxy with features/disk or a star?
 
