@@ -1,6 +1,6 @@
 # PHYS321_FinalProj
 
-Image clustering using K-means for feature generation and a predictor (TBD) for galaxy classification. 
+Image clustering using K-means for feature generation and various supervised leaning algorithms for galaxy classification. 
 
 Approach based on:
 https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
@@ -8,40 +8,20 @@ https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
 Raw data from Kaggle: 
 https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge
 
+Files for our progression can be found in the folder 'Progress files' and our final submission code is in file ______. 
+
 Challenge: Is the object a smooth galaxy, a galaxy with features/disk or a star?
 
 ==> 3 clusters (smooth, features/disk, star)
 
+What was done : 
 
-
-Done : 
-
-- Image pre-processing (including cropping, scaling, extracting patches from each image, normalizing and whitening the patches)
 - Building the dictionnary D and finding the feature vectors 
 - Getting the labels from the solutions file
 - Training and testing our models
 
-Files for our progression can be found in the folder ______ and our final submission code is in file ______. 
-**#TODO**
 
-Find a way to read all of the images and store them somewhere in the code. Have to find a way to do this without manually entering the name of each image file. OR: Instead of storing all the 424x424 images, we just _modify_ all of them and only store the cropped and scaled images.
-
-Current Important Parameters:
-- Crop size 
-- scale size
-- image patch dimensions
-- Number of patches to extract
-
-Step 1: Get images in python (all images are 424x424 pixels)
-
-Step 2: Process raw images by cropping (and scaling?) them. (Crop to 160x160, scale to 16x16)
-
-**#TODO**
-
-Step 3: Extract image patches from the processed images (Outlined in section 2 of the Coates paper)
-
-  Alternate routes we could take depending on how we do step 2:
-  - getImage_noScaling -> we sample 16x16 image patches from the 160x160 images (Method used in Coates paper)
-  - getImage_withScaling -> We sample 4x4 image patches from the 16x16 images (Less computationally intesive)
-  
-  
+Done : 
+- Image pre-processing : We take n raw images from our training folder, we crop each image from 424-by-424 pixels to 160-by-160 pixels and we scale them from 160-by-160 to 16-by-16 pixels. We then extracted four 8-by-8 patches from each image and flattended each patch into a 1-by-64 vector. Each patch vector was normalized and whitened. 
+- Unsupervised learning : We then performed a Mini batch K-means algorithm on our 4n patch vectors to get K centroids. We use the K centroids to build a k-by-64 bank of filters D which we apply to every patch vector to get a 1-by-k feature vector. 
+- Supervised learning : We transform our 4n patch feature vectors into n image feature vectors containing 4 patch arrays each. We then gather the labels from each image from the table of probabilities provided for the Kaggle challenge. From these features and labels we train and test a variety of algorithms.
