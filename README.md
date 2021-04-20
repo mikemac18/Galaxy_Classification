@@ -5,10 +5,23 @@ Image clustering using K-means for feature generation and a predictor (TBD) for 
 Approach based on:
 https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
 
+Raw data from Kaggle: 
+https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge
+
 Challenge: Is the object a smooth galaxy, a galaxy with features/disk or a star?
 
 ==> 3 clusters (smooth, features/disk, star)
 
+
+
+Done : 
+
+- Image pre-processing (including cropping, scaling, extracting patches from each image, normalizing and whitening the patches)
+- Building the dictionnary D and finding the feature vectors 
+- Getting the labels from the solutions file
+- Training and testing our models
+
+Files for our progression can be found in the folder ______ and our final submission code is in file ______. 
 **#TODO**
 
 Find a way to read all of the images and store them somewhere in the code. Have to find a way to do this without manually entering the name of each image file. OR: Instead of storing all the 424x424 images, we just _modify_ all of them and only store the cropped and scaled images.
