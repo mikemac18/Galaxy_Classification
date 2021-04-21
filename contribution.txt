@@ -8,6 +8,7 @@ Code :
 - Michael defined the GetImage class functions : normalize, whiten
 - Michael defined the training and test sets, created the multiclass models using sklearn and made the testRMS functions
 - Alex and Michael tested the code for various values of the number of pictures, number of patches, k, batch size, number of iterations for the Mini Batch Kmeans algorithm.
+- Alex reformatted code into classes in order to remove any hardcoded parameters from our early builds.
 
 Paper:
 - Michael worked on the Abstract and helped Samson work on the Methodology and Introduction. Alex worked on writing up the Accuracy for Various Models as well as the Conclusion. 
