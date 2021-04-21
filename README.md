@@ -1,5 +1,7 @@
 # PHYS321_FinalProj
 
+FINAL SUBMISSION - GalaxyClassifier.ipynb
+
 Image clustering using K-means for feature generation and various supervised leaning algorithms for galaxy classification. 
 
 Approach based on:
