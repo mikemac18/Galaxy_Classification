@@ -4,7 +4,7 @@ Objective of this project was to classify images of astronomical objects into th
 
 ==> Is the object a smooth galaxy, a galaxy with features/disk, or a star?
 
-K-means was used for feature generation, and we used various supervised learning models for classification.
+K-means was used for feature generation, and we used various supervised learning models for classification. 
 
 Approach based on:
 https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
