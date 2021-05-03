@@ -14,7 +14,7 @@ https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge
 
 Raw data could not be uploaded to GitHub, as the size of the data is too large.
 
-The highest accuracy we obtained was ~80%. The highest accuracy obtained from the Kaggle challenge was ~93%. It is important to note though, that we were unable to train on all ~61,000 images, as we needed more processing power to handle all the images. So we could only train on max ~20,000 images, therefore most likely causing the decrease in accuracy. 
+The highest accuracy we obtained was ~80%. The highest accuracy obtained from the Kaggle challenge was ~93%. It is important to note though, that we were unable to train on all ~61,000 images, as we needed more processing power to handle all the images. So we could only train on max ~20,000 images, therefore most likely causing the decrease in accuracy.
 
 Work Pipeline:
 
