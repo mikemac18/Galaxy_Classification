@@ -14,6 +14,8 @@ https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge
 
 Raw data could not be uploaded to GitHub, as the size of the data is too large.
 
+The highest accuracy we obtained was ~80%. The highest accuracy obtained from the Kaggle challenge was ~93%. It is important to note though, that we were unable to train on all ~61,000 images, as we needed more processing power to handle all the images. So we could only train on max ~20,000 images, therefore most likely causing the decrease in accuracy. 
+
 Work Pipeline:
 
 - Image pre-processing : We take n raw images from our training folder, we crop each image from 424-by-424 pixels to 160-by-160 pixels and we scale them from 160-by-160 to 16-by-16 pixels. We then extracted four 8-by-8 patches from each image and flattened each patch into a 1-by-64 vector. Each patch vector was normalized and whitened.
