@@ -4,13 +4,15 @@ Objective of this project was to classify images of astronomical objects into th
 
 ==> Is the object a smooth galaxy, a galaxy with features/disk, or a star?
 
-K-means was used for feature generation, and we used various supervised learning models for the classification.
+K-means was used for feature generation, and we used various supervised learning models for classification.
 
 Approach based on:
 https://www-cs.stanford.edu/~acoates/papers/coatesng_nntot2012.pdf
 
 Raw data from Kaggle:
 https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge
+
+Raw data could not be uploaded to GitHub, as the size of the data is too large.
 
 Work Pipeline:
 
@@ -20,10 +22,8 @@ Work Pipeline:
 
 Overview of Files:
 
+Progress files -> These files were the files we made for the different functions we created. At the end, we pieced all of them together to create our final version.
 
+GalaxyClassifier.ipynb -> Final file with all of our work pieced together into one file. Runs the feature generation process on the images, as well as runs the different supervised learning models on the generated features with their label probabilities.
 
-
-Final file - GalaxyClassifier.ipynb
-
-Files for our progression can be found in the folder 'Progress files' and our final submission code is in file GalaxyClassifier.ipynb.
-The contribution by each student can be found in the contribution.txt file.
+contribution.txt -> Describes contribution from myself and my two partners on this project.
